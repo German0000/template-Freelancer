@@ -1,30 +1,68 @@
+/* Definir variables para css*/
 :root{
     --blanco:#FFFFFF;
     --oscuro:#212121;
     --primario:#ff5722; 
     --secundario:#FC9905;
 }
+/* Globales */
 html{
     font-size: 62.5%;
+    box-sizing: border-box; /* Define un esandar para cada caja*/
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
 }
 
 body{
     font-size: 16px;/* 1rem = 10px*/
     font-family: 'Ubuntu', sans-serif;
 }
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+
+@media (min-width: 480px) {
+    .boton{
+        width: auto;
+    }
+}
+/* Tipografia */
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+/* Titulos */
 .titulo{
     text-align: center;
-    font-size: 3.8rem;
 }
 .titulo span{
     font-size: 2rem;
 }
+/* Navegacion Principal */
 .nav-bg{
     background-color: var(--secundario);
-}
-.contenedor{
-    max-width: 120rem;
-    margin: 0 auto;
 }
 .navegacion-principal{
     display: flex;
@@ -36,7 +74,6 @@ body{
         justify-content: space-between;
     }
 }
-
 .navegacion-principal a{
     display: block;
     text-align: center;
@@ -50,9 +87,31 @@ body{
     background-color: var(--primario);
     color: var(--oscuro);
 }
-
+/* Hero */
 .hero{
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 45rem;
+    position: relative;
+}
+.contenido-hero{
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0.5);
+    background-color: rgb( 0 0 0 /50%);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
+}
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
 }
